@@ -1,11 +1,13 @@
 import React from 'react';
+import Counter from '../components/Counter';
 
-const Counter = (props) => {
-    return (
-        <div>
-            Counter Page.
-        </div>
-    )
+const CounterPage = (props) => {
+  return (
+    <div>
+      Counter Page.
+      <Counter />
+    </div>
+  )
 }
 
-export default Counter;
+export default CounterPage;
