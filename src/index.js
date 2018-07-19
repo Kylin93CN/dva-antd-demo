@@ -1,6 +1,7 @@
 import dva from 'dva';
 import './index.css';
 import RouterConfig from './router'; // es6
+import counter from './models/counter';
 import { createBrowserHistory as createHistory } from 'history';
 
 // 1. Initialize
@@ -12,7 +13,7 @@ const app = dva({
 // app.use({});
 
 // 3. Model
-// app.model(require('./models/example').default);
+app.model(counter);
 
 // 4. Router
 app.router(RouterConfig);

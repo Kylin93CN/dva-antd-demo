@@ -1,6 +1,6 @@
 export default {
-  namespaces: 'counter',
+  namespace: 'counter',
   state: {
-    counter: 1,
+    count: 1,
   }
 }
