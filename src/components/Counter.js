@@ -1,14 +1,14 @@
 import React from 'react';
-import { connect } from 'dva';
 import PropTypes from 'prop-types';
 
-const Counter = ({ counter, dispatch}) => {
+const Counter = ({ counter, dispatch, counterAsyncAdd, counterAdd}) => {
   return (
     <div>
       <h1>
         {counter.count}
       </h1>
-      <button onClick={() => {dispatch({ type: 'counter/add' })}}>+</button>
+      <button onClick={() => { counterAdd() } }>+</button>
+      <button onClick={() => { counterAsyncAdd() } }>async +</button>
     </div>
   )
 }
@@ -17,10 +17,4 @@ Counter.propTypes = {
   counter: PropTypes.object,
 }
 
-const mapStateToProps = (state) => {
-  return {
-    counter: state.counter,
-  }
-}
-
-export default connect(mapStateToProps)(Counter);
+export default Counter;

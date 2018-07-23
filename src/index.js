@@ -13,6 +13,7 @@ const app = dva({
 // app.use({});
 
 // 3. Model
+// require('./models').default.forEach(key => app.model(key.default)); 引入index.js中所有model
 app.model(counter);
 
 // 4. Router
