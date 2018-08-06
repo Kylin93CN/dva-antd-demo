@@ -5,6 +5,14 @@ export default {
   state: {
     count: 1,
   },
+  subscriptions: {
+    setup({ dispatch, history }) {
+      // 窗口监听
+      window.onresize = () => {
+        dispatch({ type: 'add' });
+      }
+    },
+  },
   // 同步请求
   reducers: {
     add(state, action) { // 第一种写法

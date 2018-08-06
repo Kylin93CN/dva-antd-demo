@@ -5,7 +5,6 @@ import Counter from '../components/Counter';
 import { counterAdd, counterAsyncAdd } from '../actions';
 
 const CounterPage = (props) => {
-  console.dir(props);
   return (
     <div>
       Counter Page.
@@ -14,6 +13,7 @@ const CounterPage = (props) => {
         counterAsyncAdd={props.counterAsyncAdd}
         counter={ props.counter }
         dispatch={ props.dispatch }
+        history={ props.history }
       />
     </div>
   )
